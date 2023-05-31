@@ -1,20 +1,20 @@
 import SignUp from './components/singUpPage/SignUp';
+import Singup from './components/singUpRegister/SingUpRegister';
 import './App.css';
 import SignIn from './components/singInPage/signin';
-import Singup from './components/singUpRegister/SingUpRegister';
-import HomeLayout from './components/homePage/HomeLayout';
-
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 function App() {
   return (
     <div className="App">
-   
+    <BrowserRouter>
+      <Routes>
+        <Route  path="singUp" element={<SignUp />}/>
+      </Routes>
+    </BrowserRouter>
       {/* <SignUp /> */}
-      <HomeLayout />
-     
-  
+      <SignIn />
       
       
       

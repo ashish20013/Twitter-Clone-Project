@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import './singUpRegister.css'
 import MenuItem from '@mui/material/MenuItem';
@@ -48,7 +49,7 @@ const Singup = () => {
                         required
                         value={name}
                         onChange={handleNameChange}
-                        // sx={{width:"60%"}}
+                    // sx={{width:"60%"}}
 
                     />
                     {phoneToEmail ? (<TextField id="filled-basic"
@@ -65,10 +66,10 @@ const Singup = () => {
                             onChange={(e) => setMobile(e.target.value)}
                             variant='outlined'
                             required
-                            // sx={{width:"60%"}}
+                        // sx={{width:"60%"}}
                         />)}
 
-                        {/* <TextField id="filled-basic"
+                    {/* <TextField id="filled-basic"
                         label="Phone"
                         value={mobile}
                         onChange={(e) => setMobile(e.target.value)}
@@ -138,12 +139,16 @@ const Singup = () => {
 
                     </div>
                     <Button
+
                         type='submit'
                         onClick={saveData}
                         variant="contained"
                         id='next-btn'
                         disableElevation sx={{ width: '100%' }}>
-                        Next
+
+                        {/* // i am hear routing Next button to shingin */}
+                        <Link to="/">Next</Link>
+
                     </Button>
 
 
@@ -155,5 +160,5 @@ const Singup = () => {
     )
 }
 
-export default Singup
+export default Singup;
 
