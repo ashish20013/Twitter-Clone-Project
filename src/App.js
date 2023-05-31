@@ -6,18 +6,18 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
     <BrowserRouter>
+    <div className="App">
       <Routes>
-        <Route  path="singUp" element={<SignUp />}/>
+        <Route  index path="/" element={<SignIn />} />
+        <Route  path="/singUp" element={<SignUp />}/>
       </Routes>
-    </BrowserRouter>
-      {/* <SignUp /> */}
-      <SignIn />
+  
       
       
       
     </div>
+    </BrowserRouter>
   );
 }
 
