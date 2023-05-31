@@ -1,0 +1,14 @@
+*{
+    text-align:center;
+    justify-content: center;
+}
+.Main{
+    padding-top: 11vh;
+}
+
+.blue{
+  color:blue;
+}
+.log{
+  text-decoration: none;
+}

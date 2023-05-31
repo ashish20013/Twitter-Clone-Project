@@ -1,20 +1,14 @@
-
+import SignUp from './components/SignUp';
 import './App.css';
-// import {TextField} from "@material-ui/core"
-import SignIn from './component/signin';
-import Singup from './components/singUpRegister/SingUpRegister';
+import {TextField} from "@material-ui/core"
 
 function App() {
   return (
     <div className="App">
       
       
-      <SignIn/>
-  
-      <Singup />
       
       
-
     </div>
   );
 }
