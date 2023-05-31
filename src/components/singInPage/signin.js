@@ -1,6 +1,9 @@
+import {Link} from 'react-router-dom'
 import './signin.css'
 
+
 export default function SignIn(){
+    
     return(
         <>
             <div className="signIn-wrapper">
@@ -32,7 +35,7 @@ export default function SignIn(){
                 </div>
 
                 <div className="signup-text">
-                    <p>Dont have an account?<a href="#"> Sign Up</a></p> 
+                    <Link to="/singUp"><p>Dont have an account?<a href="#" > Sign Up</a></p> </Link>
                 </div>
             </div>
         </>

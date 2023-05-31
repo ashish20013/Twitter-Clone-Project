@@ -1,11 +1,13 @@
 import React from 'react'
 import './SignUp.css';
 import {Button} from '@mui/material'
-import { FaTwitter,FaGoogle, FaApple } from 'react-icons/fa';
+import {FaTwitter,FaGoogle,FaApple } from 'react-icons/fa'
+
+
 function SignUp() {
   return (
     <div className="Main">
-       <h1> <FaTwitter color="blue"/></h1>
+       <h1> <FaTwitter color="blue" /></h1>
             <h1 style={{color:'black'}}>Join Twitter Today</h1>
             <Button sx={{color:"black", border:"2px black solid", width:"400px", height:"50px", borderRadius:"60px"}} variant="outlined">
         <FaGoogle />
