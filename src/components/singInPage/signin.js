@@ -50,7 +50,10 @@ export default function SignIn() {
         <div className="signup-text">
           <Link to="/singUp">
             <p>
-              Dont have an account?<a href="#"> Sign Up</a>
+              Dont have an account?<Link to="/signUp">Sign Up</Link>;
+              
+              {/* //<a href="#"> Sign Up</a> */}
+
             </p>{" "}
           </Link>
         </div>

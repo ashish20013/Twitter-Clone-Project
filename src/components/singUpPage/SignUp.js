@@ -20,7 +20,8 @@ function SignUp() {
       <h3 style={{ color: 'black' }}>or</h3>
       <Button sx={{ color: "black", border: "2px black solid", width: "400px", height: "50px", borderRadius: "50px" }} variant="outlined">
 
-        Create Account
+        <Link to="/singup"> Create Account </Link>
+
       </Button>
       <h5>By signing up, you agree to the <span style={{ color: 'blue' }}>Terms of Service</span> and <span style={{ color: 'blue' }}>Privacy Policy</span>, including <span style={{ color: 'blue' }}>Cookie Use</span>.</h5>
       <h4 className="log">Have an account already? <span style={{ color: 'blue' }}>
