@@ -67,6 +67,16 @@ const Singup = () => {
                             required
                             // sx={{width:"60%"}}
                         />)}
+
+                        {/* <TextField id="filled-basic"
+                        label="Phone"
+                        value={mobile}
+                        onChange={(e) => setMobile(e.target.value)}
+                        variant='outlined'
+                        // sx={{width:"60%"}}
+                        required /> */}
+
+
                     {phoneToEmail ? (<p style={{ textAlign: 'right', color: 'rgb(29, 155, 240)', cursor: 'pointer' }} onClick={() => setPhoneToEmail(false)}>Use email instead</p>) :
                         (<p style={{ textAlign: 'right', color: 'rgb(29, 155, 240)', cursor: 'pointer' }} onClick={() => setPhoneToEmail(true)}>Use phone instead</p>)
 
@@ -76,13 +86,25 @@ const Singup = () => {
                     <h5>Date of Birth</h5>
                     <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
                     <div className='dob-field'>
-                        <TextField
+                        {/* <TextField
                             select
                             label="Month"
                             // defaultValue="EUR"
                             sx={{ width: '200px' }}>
                             {months.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField> */}
+                        <TextField
+                            select
+                            label="Months"
+                            // defaultValue="EUR"
+                            sx={{ width: '100px' }}
+                        >
+                            {months.map((option, index) => (
+                                <MenuItem key={option.id} value={option.label}>
                                     {option.label}
                                 </MenuItem>
                             ))}
