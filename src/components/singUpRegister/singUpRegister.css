@@ -1,0 +1,45 @@
+.singup-container{
+    /* display: flex; */
+
+    /* flex-wrap: wrap; */
+    width: 40%;
+    /* background-color: rgb(76, 79, 80); */
+    padding: 2rem  ;
+    border-radius: 15px;
+
+}
+.singup-form{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* width: 70%; */
+   background: white;
+    margin: auto;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+.singup-form h5{
+   margin: 0;
+   
+}
+.singup-form p{
+    margin: 0;
+    font-weight: 400;
+ }
+.dob-field{
+/* display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 1rem; */
+display: flex;
+justify-content: space-between;
+
+
+}
+#next-btn{
+    background: gray;
+    border-radius: 60px;
+    margin-top: 30px;
+
+}
