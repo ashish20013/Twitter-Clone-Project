@@ -2,24 +2,23 @@ import SignUp from './components/singUpPage/SignUp';
 import Singup from './components/singUpRegister/SingUpRegister';
 import './App.css';
 import SignIn from './components/singInPage/signin';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 function App() {
   return (
+    <div className="App">
     <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route index path="/" element={<SignIn />} />
-          <Route path="/signUp" element={<SignUp />} />
-          <Route path="/singup" element={<Singup />} />
-        </Routes>
-
-
-
-
-      </div>
+      <Routes>
+        <Route  path="singUp" element={<SignUp />}/>
+      </Routes>
     </BrowserRouter>
+      {/* <SignUp /> */}
+      <SignIn />
+      
+      
+      
+    </div>
   );
 }
 
