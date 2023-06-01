@@ -7,7 +7,7 @@ export default function SignIn(){
     return(
         <>
             <div className="signIn-wrapper">
-                <div className="logo"><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="logo"></img></div>
+                <div className="logo"><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png"></img></div>
                 <h1>Sign in to Twitter</h1>
 
         <div className="signIn-section">
@@ -44,17 +44,10 @@ export default function SignIn(){
           <button className="forgot-passBtn">Forgot password?</button>
         </div>
 
-        <div className="signup-text">
-
-            <p>
-              Dont have an account?<Link to="/signUp">Sign Up</Link>;
-              
-             
-
-            </p>
-          
-        </div>
-      </div>
-    </>
-  );
+                <div className="signup-text">
+                    <Link to="/singUp"><p>Dont have an account?<a href="#" > Sign Up</a></p> </Link>
+                </div>
+            </div>
+        </>
+    )
 }
