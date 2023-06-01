@@ -1,14 +1,43 @@
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import './signin.css'
+import { useState } from 'react';
+import HomeLayout from '../homePage/HomeLayout';
 
 
 export default function SignIn(){
+
+  const navigate=useNavigate()
+   const [getuser,Setgetuser]=useState("")
+ let handleLogin =()=>{  
+    const userInput=getuser 
+    let users =JSON.parse(localStorage.getItem("users"))
+    localStorage.setItem("auth",true)
+    let foundUser = []
+    
+    if (!isNaN(userInput)){
+        foundUser = users.filter(u => u.number == userInput)
+    }
+    else if (userInput.includes("@")){
+        foundUser = users.filter(u => u.email == userInput)
+    }else{
+        foundUser = users.filter(u => u.name == userInput)
+    }
+    
+    if (foundUser.length > 0){
+        console.log("Logging user", foundUser)
+         navigate("/home")
+    }else{
+        console.log("user not found")
+    }
+    
+}
+      
     
     return(
         <>
             <div className="signIn-wrapper">
                 <div className="logo"><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="logo"></img></div>
-                <h1>Sign in to Twitter</h1>
+                <h1 className='signbtn'>Sign in to Twitter</h1>
 
         <div className="signIn-section">
           <div className="google-btn">
@@ -35,11 +64,12 @@ export default function SignIn(){
             <input
               type="text"
               id="input"
+              onChange={(e)=>Setgetuser(e.target.value)}
               placeholder="phone number, email, or user name..."
             ></input>
           </div>
 
-          <button className="next-btn">Next</button>
+          <button className="next-btn" onClick={handleLogin}>Next</button>
 
           <button className="forgot-passBtn">Forgot password?</button>
         </div>
@@ -47,7 +77,7 @@ export default function SignIn(){
         <div className="signup-text">
 
             <p>
-              Dont have an account?<Link to="/signUp">Sign Up</Link>;
+              Dont have an account?<Link to="/signUp">Sign Up</Link>
               
              
 
