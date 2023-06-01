@@ -48,14 +48,14 @@ export default function SignIn() {
         </div>
 
         <div className="signup-text">
-          <Link to="/singUp">
+          
             <p>
               Dont have an account?<Link to="/signUp">Sign Up</Link>;
               
-              {/* //<a href="#"> Sign Up</a> */}
 
-            </p>{" "}
-          </Link>
+            </p>
+            
+          
         </div>
       </div>
     </>
