@@ -37,7 +37,7 @@ export default function SignIn(){
         <>
             <div className="signIn-wrapper">
                 <div className="logo"><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="logo"></img></div>
-                <h1 className='signbtn'>Sign in to Twitter</h1>
+                <h1>Sign in to Twitter</h1>
 
         <div className="signIn-section">
           <div className="google-btn">
@@ -77,7 +77,7 @@ export default function SignIn(){
         <div className="signup-text">
 
             <p>
-              Dont have an account?<Link to="/signUp">Sign Up</Link>
+              Dont have an account?<Link to="/signUp">Sign Up</Link>;
               
              
 
