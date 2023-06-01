@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom";
-import "./signin.css";
+import {Link} from 'react-router-dom'
+import './signin.css'
 
-export default function SignIn() {
-  return (
-    <>
-      <div className="signIn-wrapper">
-        <div className="logo">
-          <img
-            src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png"
-            alt="logo"
-          />
-        </div>
-        <h1>Sign in to Twitter</h1>
+
+export default function SignIn(){
+    
+    return(
+        <>
+            <div className="signIn-wrapper">
+                <div className="logo"><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png"></img></div>
+                <h1>Sign in to Twitter</h1>
 
         <div className="signIn-section">
           <div className="google-btn">
@@ -48,14 +45,14 @@ export default function SignIn() {
         </div>
 
         <div className="signup-text">
-          
+          <Link to="/singUp">
             <p>
               Dont have an account?<Link to="/signUp">Sign Up</Link>;
               
+              {/* //<a href="#"> Sign Up</a> */}
 
-            </p>
-            
-          
+            </p>{" "}
+          </Link>
         </div>
       </div>
     </>
