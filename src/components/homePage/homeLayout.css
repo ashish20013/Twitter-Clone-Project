@@ -4,7 +4,7 @@
     padding: 0;
 }
 #home-layout{
-    width: 100%;
+    width: 80%;
     height: 100vh;
     /* background: #ccc; */
     display: grid;
