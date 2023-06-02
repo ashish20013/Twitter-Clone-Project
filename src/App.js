@@ -1,25 +1,28 @@
 import SignUp from './components/singUpPage/SignUp';
 import Singup from './components/singUpRegister/SingUpRegister';
+import HomeLayout from './components/homePage/HomeLayout'
 
 import './App.css';
 import SignIn from './components/singInPage/signin';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HomeLayout from '../src/components/homePage/HomeLayout'
 
 
 function App() {
   return (
-    // <BrowserRouter>
-    //   <div className="App">
-    //     <Routes>
-    //       <Route path="/" element={<SignIn />} />
-    //       <Route path="/signUp" element={<SignUp />} />
-    //       <Route path="/singup" element={<Singup />} />
-    //     </Routes>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/singup" element={<Singup />} />
+          <Route path="/home" element={<HomeLayout />} />
+        </Routes>
 
-    //  </div>
-    // </BrowserRouter>
-    <HomeLayout />
+
+
+
+      </div>
+    </BrowserRouter>
   );
 }
 

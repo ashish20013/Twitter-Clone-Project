@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import './singUpRegister.css'
 import MenuItem from '@mui/material/MenuItem';
@@ -8,32 +8,50 @@ import Button from '@mui/material/Button';
 import { Alert } from '@mui/material';
 
 const Singup = () => {
-    const [mobile, setMobile] = useState(" ");
+    
+    const [phone,Setphone]=useState("")
+    const [name, Setname]=useState("")
+    const [email,Setemail]=useState("")
+    const [month,Setmonth]=useState("")
+    const [year,Setyear]=useState("")
+    const [day,Setday]=useState("")
+
+    const [validation,Setvalidation]=useState({
+        name:"",
+        phone:"",
+        email:"",
+        month:"",
+        year:"",
+        day:""
+    })
+   
     const [phoneToEmail, setPhoneToEmail] = useState(false)
 
-    const saveData = () => {
-        const isValidNumber = /^\d{10}$/.test(mobile);
-        if (!isValidNumber) {
-            Alert("Invalid mobile n umber");
-            return;
+    // const saveData = () => {
+    //     const isValidNumber = /^\d{10}$/.test(mobile);
+    //     if (!isValidNumber) {
+    //         Alert("Invalid mobile n umber");
+    //         return;
+    //     }
+    // }
+   
+    // const nameRegex = /^[a-zA-Z0-9]{3,20}$/;
+    const saveData=()=>{
+        var users=JSON.parse(localStorage.getItem("users") || "[]")
+        var userData={
+            name:name,
+            email:email,
+            phone:phone,
+            day:day,
+            year:year,
+            month:month
+
         }
-    }
-    const [name, setName] = useState('');
-    const nameRegex = /^[a-zA-Z0-9]{3,20}$/;
-
-    function handleNameChange(event) {
-        setName(event.target.value);
+        users.push(userData)
+        localStorage.setItem("users",JSON.stringify(users))
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
 
-        if (nameRegex.test(name)) {
-            // The name field is valid
-        } else {
-            // The name field is invalid
-        }
-    }
 
 
     return (
@@ -41,29 +59,30 @@ const Singup = () => {
 
             <div className='singup-form' >
                 <h1>Create your account</h1>
-                <form onSubmit={handleSubmit} style={{ display: 'contents' }}>
+                <form style={{ display: 'contents' }}>
                     <TextField id="filled-basic"
                         className='name-field'
                         label="Name"
                         variant='outlined'
                         required
+                        
                         value={name}
-                        onChange={handleNameChange}
+                        onChange={(e)=>{Setname(e.target.value)}}
                     // sx={{width:"60%"}}
 
                     />
                     {phoneToEmail ? (<TextField id="filled-basic"
                         label="Phone"
-                        value={mobile}
-                        onChange={(e) => setMobile(e.target.value)}
+                        value={phone}
+                        onChange={(e) => Setphone(e.target.value)}
                         variant='outlined'
                         // sx={{width:"60%"}}
                         required />)
                         : (<TextField id="filled-basic"
                             label="Email"
                             type='email'
-                            value={mobile}
-                            onChange={(e) => setMobile(e.target.value)}
+                            value={email}
+                            onChange={(e) =>Setemail(e.target.value)}
                             variant='outlined'
                             required
                         // sx={{width:"60%"}}
@@ -101,7 +120,8 @@ const Singup = () => {
                         <TextField
                             select
                             label="Months"
-                            // defaultValue="EUR"
+                            value={month}
+                            onChange={(e)=>{Setmonth(e.target.value)}}
                             sx={{ width: '100px' }}
                         >
                             {months.map((option, index) => (
@@ -114,7 +134,8 @@ const Singup = () => {
                         <TextField
                             select
                             label="Days"
-                            // defaultValue="EUR"
+                            value={day}
+                            onChange={(e)=>{Setday(e.target.value)}}
                             sx={{ width: '100px' }}
                         >
                             {days.map((option, index) => (
@@ -127,7 +148,8 @@ const Singup = () => {
                         <TextField
                             select
                             label="Year"
-                            // defaultValue="EUR"
+                            value={year}
+                            onChange={(e)=>{Setyear(e.target.value)}}
                             sx={{ width: '150px' }}
                         >
                             {years.map((option, index) => (
@@ -139,16 +161,12 @@ const Singup = () => {
 
                     </div>
                     <Button
-
                         type='submit'
                         onClick={saveData}
                         variant="contained"
                         id='next-btn'
                         disableElevation sx={{ width: '100%' }}>
-
-                        {/* // i am hear routing Next button to shingin */}
-                        <Link to="/">Next</Link>
-
+                        Next
                     </Button>
 
 

@@ -15,8 +15,8 @@
     height: 7vh;
 }
 .google-btn img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
     
 }
@@ -30,10 +30,11 @@
     margin: auto;
     cursor: pointer;
     height: 7vh;
+    
 }
 .apple-btn img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
 }
 .signIn-section {
@@ -49,7 +50,7 @@
 .ruler hr {
     width: 15vw;
     height: 0;
-    margin: 10px 20px;
+    margin: 5px 20px;
 }
 .logo {
     text-align: center;
@@ -61,13 +62,12 @@
 }
 .input-box input {
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     font-size: 18px;
     padding-left: 10px;
 }
 .next-btn {
     width: 100%;
-    padding: 10px;
     margin: auto;
     border-radius: 50px;
     background-color: black;
@@ -79,14 +79,17 @@
 .forgot-passBtn {
     font-size: 20px;
     font-family: sans-serif;
-    padding: 10px;
     border-radius: 50px;
     background-color: white;
     border: 1px solid #ccc;
     cursor: pointer;
+    width: auto;
 }
 .signup-text a {
     text-decoration: none;
     color: #29A8DF;
     font-size: 18px;
+}
+.signbtn{
+    margin-bottom: 25px;
 }
